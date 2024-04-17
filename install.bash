@@ -1,8 +1,9 @@
 #!/usr/bin/bash
 
 script_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-create_venv=true
-
+create_venv=false
+/data/miniconda/bin/conda  create -n sdtrainer python=3.10.8
+/data/miniconda/bin/conda activate sdtrainer
 while [ -n "$1" ]; do
     case "$1" in
         --disable-venv)
